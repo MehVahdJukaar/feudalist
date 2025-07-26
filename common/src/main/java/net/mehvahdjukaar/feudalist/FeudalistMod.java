@@ -15,7 +15,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Supplier;
 
 
@@ -38,12 +40,13 @@ public class FeudalistMod {
             )
     );
 
-    public static final Supplier<Block> FLAGSTONE_BRICKS = regBlock("flagstone_bricks",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)
-                    .destroyTime(1)
-                    .sound(SoundType.NETHER_BRICKS)
-            )
-    );
+    public static final Map<RegHelper.VariantType, Supplier<Block>> FLAGSTONE_BRICKS =
+            regBlockSet("flagstone_bricks",
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)
+                            .destroyTime(1)
+                            .sound(SoundType.TUFF_BRICKS)
+
+            );
 
     // end blocks
 
@@ -59,6 +62,12 @@ public class FeudalistMod {
         var s = RegHelper.registerBlockWithItem(
                 res(id), blockSupplier);
         BLOCKS.add(s);
+        return s;
+    }
+
+    private static EnumMap<RegHelper.VariantType, Supplier<Block>> regBlockSet(String id, BlockBehaviour.Properties prop) {
+        var s = RegHelper.registerFullBlockSet(res(id), prop);
+        BLOCKS.addAll(s.values());
         return s;
     }
 
