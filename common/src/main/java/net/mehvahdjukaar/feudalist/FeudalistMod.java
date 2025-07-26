@@ -3,6 +3,7 @@ package net.mehvahdjukaar.feudalist;
 
 import net.mehvahdjukaar.moonlight.api.misc.RegSupplier;
 import net.mehvahdjukaar.moonlight.api.platform.RegHelper;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -43,7 +44,8 @@ public class FeudalistMod {
 
     public static final RegSupplier<CreativeModeTab> TAB = RegHelper.registerCreativeModeTab(
             res("feudalist_tab"), b -> {
-                b.icon(() -> FANCY_STONE.get().asItem().getDefaultInstance());
+                b.icon(() -> FANCY_STONE.get().asItem().getDefaultInstance())
+                        .title(Component.translatable("aa"));
             }
     );
 
