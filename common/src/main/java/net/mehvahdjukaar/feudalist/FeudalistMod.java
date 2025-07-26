@@ -41,7 +41,7 @@ public class FeudalistMod {
     public static final Supplier<Block> FLAGSTONE_BRICKS = regBlock("flagstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)
                     .destroyTime(1)
-                    .sound(SoundType.TUFF_BRICKS)
+                    .sound(SoundType.NETHER_BRICKS)
             )
     );
 
