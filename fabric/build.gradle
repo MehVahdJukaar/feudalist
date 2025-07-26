@@ -26,7 +26,9 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 
-    modImplementation "curse.maven:selene-499980:6814742"
+    //modImplementation "curse.maven:selene-499980:6814742"
+    modImplementation("net.mehvahdjukaar:moonlight:${moonlight_version}-fabric")
+
 }
 
 
