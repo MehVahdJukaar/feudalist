@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "pepjebs.mapatlases.fabric.MapAtlasesFabric"
+      "net.mehvahdjukaar.fabric.MapAtlasesFabric"
     ],
     "modmenu": [
       "pepjebs.mapatlases.integration.fabric.ModMenuCompat"
