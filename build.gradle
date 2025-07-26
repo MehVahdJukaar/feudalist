@@ -70,12 +70,12 @@ subprojects {
             versionNumber = modLoader +"_"+ mod_version
             versionType = release_type
             if (modLoader == "fabric") {
-                projectId = modrinth_id_fabric
+                projectId = modrinth_id
                 dependencies {
                     required.project "fabric-api"
                 }
             } else {
-                projectId = modrinth_id_forge
+                projectId = modrinth_id
                 dependencies {
                 }
             }
@@ -100,12 +100,12 @@ subprojects {
                 mainArtifact(tasks.remapJar)
 
                 if (modLoader == "fabric") {
-                    id = project_id_fabric
+                    id = project_id
                     relations {
                         requiredDependency "fabric-api"
                     }
                 } else {
-                    id = project_id_forge
+                    id = project_id
                 }
             }
         }
