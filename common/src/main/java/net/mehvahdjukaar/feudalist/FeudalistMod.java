@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -37,7 +38,12 @@ public class FeudalistMod {
             )
     );
 
-
+    public static final Supplier<Block> FLAGSTONE_BRICKS = regBlock("flagstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)
+                    .destroyTime(1)
+                    .sound(SoundType.TUFF_BRICKS)
+            )
+    );
 
     // end blocks
 
