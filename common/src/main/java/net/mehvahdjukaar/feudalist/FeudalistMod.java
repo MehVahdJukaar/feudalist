@@ -21,7 +21,7 @@ public class FeudalistMod {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 
-    public static final Supplier<Block> DUMB_BLOCK = RegHelper.registerBlock(
+    public static final Supplier<Block> DUMB_BLOCK = RegHelper.registerBlockWithItem(
             res("empty_maps"), () -> new Block(
                     BlockBehaviour.Properties.of()
                             .noCollission()

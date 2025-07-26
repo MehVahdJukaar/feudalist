@@ -16,19 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.mehvahdjukaar.feudalist.fabric.MapAtlasesFabric"
-    ],
-    "modmenu": [
-      "pepjebs.mapatlases.integration.fabric.ModMenuCompat"
-    ],
-    "rei_client": [
-      "pepjebs.mapatlases.integration.REICompat"
-    ],
-    "jei_mod_plugin": [
-      "pepjebs.mapatlases.integration.JEICompat"
-    ],
-    "emi": [
-      "pepjebs.mapatlases.integration.EMICompat"
+      "net.mehvahdjukaar.feudalist.fabric.FeudalistModFabric"
     ]
   },
   "custom": {
